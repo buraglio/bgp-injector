@@ -18,20 +18,63 @@ echo "grab example gobgpd.conf"
 curl https://raw.githubusercontent.com/buraglio/bgp-injector/master/gobgpd.conf -o gobgpd.conf
 
 echo "Create directories for each route table if they don't exist"
-if [[ ! -e route-tables/EU/Amsterdam/ ]]; then
-    mkdir -p route-tables/EU/Amsterdam/
-if [[ ! -e route-tables/EU/London/ ]]; then
-    mkdir -p route-tables/EU/London/
-if [[ ! -e route-tables/Asia/Singapore/ ]]; then
-    mkdir -p route-tables/Asia/Singapore/
-if [[ ! -e rroute-tables/SouthAmerica/SaoPaulo/ ]]; then
-    mkdir -p route-tables/SouthAmerica/SaoPaulo/
-if [[ ! -e route-tables/US/NewYork/ ]]; then
-    mkdir -p route-tables/US/NewYork/
-if [[ ! -e route-tables/US/PaloAlto/ ]]; then
-    mkdir -p route-tables/US/PaloAlto/
-if [[ ! -e route-tables/Africa/JoBurg/ ]]; then
-    mkdir -p route-tables/Africa/JoBurg/
+
+createDir(){
+	if [ ! -d route-tables/EU/Amsterdam/ ]
+	then
+		/bin/mkdir -p $1 >/dev/null 2>&1 && echo "Directory $1 created." ||  echo "Error: Failed to create $1 directory."
+	else
+		echo "Error: $1 directory exits!"
+	fi
+}
+createDir(){
+	if [ ! -d route-tables/EU/London/ ]
+	then
+		/bin/mkdir -p $1 >/dev/null 2>&1 && echo "Directory $1 created." ||  echo "Error: Failed to create $1 directory."
+	else
+		echo "Error: $1 directory exits!"
+	fi
+}
+createDir(){
+	if [ ! -d route-tables/Asia/Singapore/ ]
+	then
+		/bin/mkdir -p $1 >/dev/null 2>&1 && echo "Directory $1 created." ||  echo "Error: Failed to create $1 directory."
+	else
+		echo "Error: $1 directory exits!"
+	fi
+}
+createDir(){
+	if [ ! -d route-tables/SouthAmerica/SaoPaulo/ ]
+	then
+		/bin/mkdir -p $1 >/dev/null 2>&1 && echo "Directory $1 created." ||  echo "Error: Failed to create $1 directory."
+	else
+		echo "Error: $1 directory exits!"
+	fi
+}
+createDir(){
+	if [ ! -d route-tables/US/NewYork/ ]
+	then
+		/bin/mkdir -p $1 >/dev/null 2>&1 && echo "Directory $1 created." ||  echo "Error: Failed to create $1 directory."
+	else
+		echo "Error: $1 directory exits!"
+	fi
+}
+createDir(){
+	if [ ! -d route-tables/US/PaloAlto/ ]
+	then
+		/bin/mkdir -p $1 >/dev/null 2>&1 && echo "Directory $1 created." ||  echo "Error: Failed to create $1 directory."
+	else
+		echo "Error: $1 directory exits!"
+	fi
+}
+createDir(){
+	if [ ! -d route-tables/Africa/JoBurg/ ]
+	then
+		/bin/mkdir -p $1 >/dev/null 2>&1 && echo "Directory $1 created." ||  echo "Error: Failed to create $1 directory."
+	else
+		echo "Error: $1 directory exits!"
+	fi
+}
 
 # Uncomment the latest route table dump files for user
 
