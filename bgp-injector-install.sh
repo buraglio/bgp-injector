@@ -11,8 +11,8 @@ echo "from RIPE will require a significant amount of memory (16G is recommended)
 
 
 echo "install gobgp"
-apt update
-apt install -y gobgpd curl
+sudo apt update
+sudo apt install -y gobgpd curl
 
 echo "grab example gobgpd.conf"
 curl https://raw.githubusercontent.com/buraglio/bgp-injector/master/gobgpd.conf -o gobgpd.conf
