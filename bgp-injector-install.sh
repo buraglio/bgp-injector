@@ -105,8 +105,8 @@ curl -o - http://data.ris.ripe.net/rrc00/latest-bview.gz | gunzip > route-tables
 
 echo "##################################################################"
 echo "Grab latest route table from London"
-curl -o - http://data.ris.ripe.net/rrc01/latest-bview.gz | gunzip > route-tables/EU/London/latest-bview
 echo "##################################################################"
+curl -o - http://data.ris.ripe.net/rrc01/latest-bview.gz | gunzip > route-tables/EU/London/latest-bview
 
 echo "##################################################################"
 echo "Grab latest route table from Singapore"
