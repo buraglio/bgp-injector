@@ -13,7 +13,7 @@
 * Downloading and updating all 7 of the route tables may take quite some time
 
 ## Usage
-
+```
    git clone https://github.com/buraglio/bgp-injector.git
    cd bgp-injector
    chmod +x bgp-injector-install.sh
@@ -21,3 +21,4 @@
    vi gobgpd.conf # Make any necessary adjustments
    sudo gobgpd -f gobgpd.conf
    sudo gobgp mrt inject global route-tables/EU/Amsterdam/<filename>
+```
