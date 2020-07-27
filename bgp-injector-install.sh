@@ -17,8 +17,12 @@ apt install -y gobgpd
 scho "create a high level folder called bgp-injector"
 
 if [[ ! -e bgp-injector/ ]]; then
-    mkdir -p route-tables/EU/Amsterdam/
+    mkdir -p bgp-injector/
 
+cd bgp-injector 
+
+echo "grab example gobgpd.conf"
+curl https://raw.githubusercontent.com/buraglio/bgp-injector/master/gobgpd.conf -o gobgpd.conf
 
 echo "Create directories for each route table if they don't exist"
 if [[ ! -e route-tables/EU/Amsterdam/ ]]; then
