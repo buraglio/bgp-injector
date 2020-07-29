@@ -11,6 +11,7 @@
 * Each update file is quite large. After uncompressing some may be ~6G
 * Adjust the shell script to account for how many of the route tables you'll actually need.
 * Downloading and updating all 7 of the route tables may take quite some time
+* For example, adding a full table from a RIPE MRT file will take literally days. There may be a better way to do this, bu tI have not found it.  
 
 ## Usage
 ```
